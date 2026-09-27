@@ -14,8 +14,11 @@ class Maze
 {
 private:
     vector<vector<int>> grid;
+    vector<vector<bool>> pathOverlay;
+
     int rows;
     int cols;
+
     Point source;
     Point destination;
 
@@ -32,6 +35,9 @@ public:
     int getCols();
 
     int getCell(int row, int col);
+    int getCellCost(int row, int col);
+
+    void markPath(vector<int> path);
 };
 
 #endif
